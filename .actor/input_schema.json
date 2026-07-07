@@ -1,0 +1,31 @@
+{
+    "title": "Input schema",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "locations": {
+            "title": "Locations",
+            "type": "array",
+            "description": "List of cities or areas to search in (e.g. ['New York, NY', 'Austin, TX'])",
+            "editor": "stringList",
+            "default": [
+                "New York, USA"
+            ]
+        },
+        "maxItems": {
+            "title": "Max Items per Location",
+            "type": "integer",
+            "description": "Maximum number of places to scrape per location",
+            "default": 100
+        },
+        "maxRunTimeMinutes": {
+            "title": "Max run time (minutes)",
+            "type": "integer",
+            "description": "Timeout as a graceful kill switch.",
+            "default": 1440
+        }
+    },
+    "required": [
+        "locations"
+    ]
+}

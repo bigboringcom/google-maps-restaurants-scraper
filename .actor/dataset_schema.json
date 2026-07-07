@@ -1,0 +1,58 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+            "name": {
+                "type": "string",
+                "title": "Business Name"
+            },
+            "phone": {
+                "type": "string",
+                "title": "Phone Number"
+            },
+            "address": {
+                "type": "string",
+                "title": "Address"
+            },
+            "website": {
+                "type": "string",
+                "title": "Website"
+            },
+            "url": {
+                "type": "string",
+                "title": "Google Maps URL"
+            },
+            "rating": {
+                "type": "number",
+                "title": "Rating"
+            },
+            "reviewsCount": {
+                "type": "integer",
+                "title": "Reviews Count"
+            }
+        },
+        "additionalProperties": true
+    },
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "description": "Table view of the scraped listings",
+            "transformation": {
+                "fields": [
+                    "name",
+                    "phone",
+                    "address",
+                    "website",
+                    "rating",
+                    "reviewsCount",
+                    "url"
+                ]
+            },
+            "display": {
+                "component": "table"
+            }
+        }
+    }
+}

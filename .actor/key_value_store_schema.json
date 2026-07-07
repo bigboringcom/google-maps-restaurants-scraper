@@ -1,0 +1,11 @@
+{
+    "title": "Key-value store schema",
+    "type": "object",
+    "collections": {
+        "logs": {
+            "title": "Logs",
+            "keyPrefix": "OUTPUT_"
+        }
+    },
+    "actorKeyValueStoreSchemaVersion": 1
+}

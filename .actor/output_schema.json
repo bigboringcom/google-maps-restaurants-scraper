@@ -1,0 +1,11 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of the scraper",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Extracted Data",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
+}

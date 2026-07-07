@@ -1,0 +1,19 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Web Server",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/status": {
+            "get": {
+                "summary": "Check status",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    }
+}

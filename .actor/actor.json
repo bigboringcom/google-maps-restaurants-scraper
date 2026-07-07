@@ -1,0 +1,17 @@
+{
+    "actorSpecification": 1,
+    "name": "google-maps-restaurants-scraper",
+    "title": "Google Maps Restaurants & Cafes Scraper",
+    "version": "1.0",
+    "pricing": {
+        "pricingModel": "PAY_PER_RESULT",
+        "pricePerDatasetItem": 0.005
+    },
+    "usesStandbyMode": true,
+    "webServerSchema": "./openapi.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json",
+        "keyValueStore": "./key_value_store_schema.json"
+    }
+}
