@@ -15,7 +15,7 @@ console.log(`Starting Google Maps Scraper for ${NICHE} in locations: ${locations
 // Create the search terms by combining niche and locations
 const searchStringsArray = locations.map(loc => `${NICHE} in ${loc}`);
 
-// Prepare the input for the official compass/google-maps-scraper
+// Prepare the input for the official compass/crawler-google-places
 const mapsInput = {
     searchStringsArray: searchStringsArray,
     maxCrawledPlacesPerSearch: maxItems,
@@ -28,12 +28,12 @@ const mapsInput = {
     scrapeReviewId: false,
     scrapeReviewUrl: false,
     scrapeResponseFromOwnerText: false,
-    // Add graceful kill switch timeout logic internally if supported by the actor, but compass/google-maps-scraper handles limits well.
+    // Add graceful kill switch timeout logic internally if supported by the actor, but compass/crawler-google-places handles limits well.
 };
 
-console.log(`Calling compass/google-maps-scraper with input:`, mapsInput);
+console.log(`Calling compass/crawler-google-places with input:`, mapsInput);
 
-const run = await Actor.call('compass/google-maps-scraper', mapsInput);
+const run = await Actor.call('compass/crawler-google-places', mapsInput);
 
 console.log(`Google Maps scraper finished. Run ID: ${run.id}. Status: ${run.status}`);
 
